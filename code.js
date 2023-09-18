@@ -15,3 +15,9 @@ function fib(s) {
 }
 console.log(fib(10));
 // get help from TA
+
+//Invariant
+/**
+ * What I think is always true is the new array element is the sum of the previous two numbers,
+ *  So something is a new array item pushed into the old array = (arr[n-1]+arr[n-2])
+ */
