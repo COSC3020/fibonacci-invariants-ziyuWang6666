@@ -27,3 +27,15 @@ about it at the start of each recursive call.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. You do not need to prove that the invariant is correct. Add
 your answer to this markdown file.
+
+
+## Answer
+Invariant: The returned array resultArr always contains the first 's' Fibonacci numbers
+
+when s == 0, resultArr = [0]
+
+when s == 1, resultArr = [0,1]
+
+when s == 2, resultArr = [0,1,1]
+
+when s > 3, resultArr = [fib(s-1), resultArr[s-2]+resultArr[s-1]]
