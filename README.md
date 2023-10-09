@@ -30,7 +30,7 @@ your answer to this markdown file.
 
 
 ## Answer
-Invariant: The returned array resultArr always contains the first 's' Fibonacci numbers
+Invariant: The returned array resultArr always contains the first 's' Fibonacci numbers and the sum of the two previous ones as the current computed new element at the end of resultArr.
 
 when s == 0, resultArr = [0]
 
