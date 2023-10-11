@@ -39,3 +39,8 @@ when s == 1, resultArr = [0,1]
 when s == 2, resultArr = [0,1,1]
 
 when s > 3, resultArr = [fib(s-1), resultArr[s-2]+resultArr[s-1]]
+
+#### explain
+The original Fibonacci function always takes two functions recursively executed: fib(n-1)+fib(n-2). So, asymptotically it is T(n) = T(n-1)+T(n-2)+C
+
+Right now, we just implement one recursive function fib(n-1), and then add the two previous numbers' results as the new number in the Fibonacci series. So, asymtocially it is T(n) = T(n-1) + C. It's much faster and more efficient than the original one.
