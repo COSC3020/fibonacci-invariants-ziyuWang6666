@@ -30,15 +30,7 @@ your answer to this markdown file.
 
 
 ## Answer
-Invariant: The returned array resultArr always contains the first 's' Fibonacci numbers and the sum of the two previous ones as the current computed new element at the end of resultArr.
-
-when s == 0, resultArr = [0]
-
-when s == 1, resultArr = [0,1]
-
-when s == 2, resultArr = [0,1,1]
-
-when s > 3, resultArr = [fib(s-1), resultArr[s-2]+resultArr[s-1]]
+Invariant: Begin with 0 and 1 as the initial values in the Fibonacci number sequence. Then, repeatedly sum the two most recent counts and append the result to an array to generate the Fibonacci number series. In the end, the returned array always comprises 's' Fibonacci numbers.
 
 #### explain
 The original Fibonacci function always takes two functions recursively executed: fib(n-1)+fib(n-2). So, asymptotically it is T(n) = T(n-1)+T(n-2)+C
