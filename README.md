@@ -17,7 +17,6 @@ testing code that uses [jsverify](https://jsverify.github.io/) in
 `code.test.js`.
 
 ## Invariant
-
 What is a good invariant for your recursive implementation of `fib()`
 i.e. something that is always true at the beginning of the recursive call?
 
