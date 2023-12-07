@@ -29,7 +29,18 @@ your answer to this markdown file.
 
 
 ## Answer
-Invariant: Begin with 0 and 1 as the initial values in the Fibonacci number sequence. Then, repeatedly sum the two most recent counts and append the result to an array to generate the Fibonacci number series. In the end, the returned array always comprises 's' Fibonacci numbers.
+Invariant: Begin with 0 and 1 as the initial values in the Fibonacci number sequence. Then, repeatedly sum the two most recent counts and append the result to an array to generate the Fibonacci number series. In the end, the returned array always contains Fibonacci numbers up to index s.
+
+Base case:
+1. s==0, return [0], index = 0
+2. s<2, return [0,1], index = 1
+3. s<3, return [0,1,1], index = 2
+
+Permutation case:
+1. When s>= 3, the function calls itself with fib(s-1). By the invariant, this returns an array containing Fibonacci numbers up to index s-1. 
+
+2. Next, the function adds the sum of the last two items (resultArr[s-2]+resultArr[s-1]) to the array. This extends the array to include the Fibonacci number at index s. The array now contains Fibonacci numbers up to index s, so the invariant still holds.
+
 
 #### explain
 The original Fibonacci function always takes two functions recursively executed: fib(n-1)+fib(n-2). So, asymptotically it is T(n) = T(n-1)+T(n-2)+C
