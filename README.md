@@ -28,21 +28,15 @@ most important part. You do not need to prove that the invariant is correct. Add
 your answer to this markdown file.
 
 
-## Answer
-Invariant: Begin with 0 and 1 as the initial values in the Fibonacci number sequence. Then, repeatedly sum the two most recent counts and append the result to an array to generate the Fibonacci number series. In the end, the returned array always contains Fibonacci numbers up to index s.
+## Invariant Answer
+At the beginning of the function, a good invariant for my implementation should be s-1, "At this point, the array contains the each element of the Fibonacci Sequence up to value s-1."
 
-Base case:
-1. s==0, return [0], index = 0
-2. s<2, return [0,1], index = 1
-3. s<3, return [0,1,1], index = 2
-
-Permutation case:
-1. When s>= 3, the function calls itself with fib(s-1). By the invariant, this returns an array containing Fibonacci numbers up to index s-1. 
-
-2. Next, the function adds the sum of the last two items (resultArr[s-2]+resultArr[s-1]) to the array. This extends the array to include the Fibonacci number at index s. The array now contains Fibonacci numbers up to index s, so the invariant still holds.
+At the end of recursive of fib(), just before returning the array, the invariant is s, "At this stage, the array includes every element of the Fibonacci Sequence up to value s."
 
 
 #### explain
 The original Fibonacci function always takes two functions recursively executed: fib(n-1)+fib(n-2). So, asymptotically it is T(n) = T(n-1)+T(n-2)+C
 
 Right now, we just implement one recursive function fib(n-1), and then add the two previous numbers' results as the new number in the Fibonacci series. So, asymtocially it is T(n) = T(n-1) + C. It's much faster and more efficient than the original one.
+
+//Invariant get help from chatGPT
